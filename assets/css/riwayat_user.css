@@ -1,0 +1,76 @@
+/* =========================================
+   RIWAYAT USER (SAMA PERSIS KAYAK STATUS)
+   - Tidak nabrak sidebar
+   - Card mengikuti layout dashboard.css
+   ========================================= */
+
+.page-riwayat .table-card {
+  overflow: hidden;
+}
+
+/* wrapper scroll sama kayak halaman status */
+.page-riwayat .table-wrap{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* tabel rapi, header/body sinkron */
+.page-riwayat table.riwayat{
+  width: 100%;
+  min-width: 1050px; /* karena kolomnya 8, butuh lebih lebar */
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.page-riwayat table.riwayat thead{ display: table-header-group !important; }
+.page-riwayat table.riwayat tbody{ display: table-row-group !important; }
+.page-riwayat table.riwayat tr{ display: table-row !important; }
+.page-riwayat table.riwayat th,
+.page-riwayat table.riwayat td{ display: table-cell !important; }
+
+.page-riwayat table.riwayat th,
+.page-riwayat table.riwayat td{
+  padding: 12px 14px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* kolom layanan boleh wrap biar enak dibaca */
+.page-riwayat table.riwayat td:nth-child(2){
+  white-space: normal;
+  min-width: 240px;
+  line-height: 1.25;
+}
+
+/* rapihin ukuran kolom biar mirip status */
+.page-riwayat table.riwayat th:nth-child(1),
+.page-riwayat table.riwayat td:nth-child(1){ width:60px; text-align:center; }
+
+.page-riwayat table.riwayat th:nth-child(3),
+.page-riwayat table.riwayat td:nth-child(3){ width:110px; }
+
+.page-riwayat table.riwayat th:nth-child(4),
+.page-riwayat table.riwayat td:nth-child(4){ width:110px; text-align:center; }
+
+.page-riwayat table.riwayat th:nth-child(5),
+.page-riwayat table.riwayat td:nth-child(5){ width:140px; }
+
+.page-riwayat table.riwayat th:nth-child(6),
+.page-riwayat table.riwayat td:nth-child(6){ width:120px; text-align:center; }
+
+.page-riwayat table.riwayat th:nth-child(7),
+.page-riwayat table.riwayat td:nth-child(7){ width:140px; }
+
+.page-riwayat table.riwayat th:nth-child(8),
+.page-riwayat table.riwayat td:nth-child(8){ width:150px; }
+
+.page-riwayat .table-wrap{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.page-riwayat table.riwayat{
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+}

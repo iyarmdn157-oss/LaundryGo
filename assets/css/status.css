@@ -1,0 +1,82 @@
+/* ===============================
+   STATUS TABLE (FIX FINAL)
+   =============================== */
+
+.page-status .status-wrap{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* balikin struktur table normal (kalau ada CSS lain yang bikin display:block) */
+.page-status table.status-table{
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.page-status table.status-table thead,
+.page-status table.status-table tbody,
+.page-status table.status-table tr{
+  display: table-row-group;
+}
+
+.page-status table.status-table thead{
+  display: table-header-group;
+}
+
+.page-status table.status-table tbody{
+  display: table-row-group;
+}
+
+.page-status table.status-table tr{
+  display: table-row;
+}
+
+.page-status table.status-table th,
+.page-status table.status-table td{
+  display: table-cell;
+  padding: 12px 14px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* kolom layanan boleh turun baris */
+.page-status table.status-table td:nth-child(2){
+  white-space: normal;
+  line-height: 1.25;
+  min-width: 220px;
+}
+
+/* kecilin kolom-kolom lain biar rapi */
+.page-status table.status-table th:nth-child(1),
+.page-status table.status-table td:nth-child(1){ width: 60px; text-align:center; }
+
+.page-status table.status-table th:nth-child(3),
+.page-status table.status-table td:nth-child(3){ width: 110px; }
+
+.page-status table.status-table th:nth-child(4),
+.page-status table.status-table td:nth-child(4){ width: 110px; text-align:center; }
+
+.page-status table.status-table th:nth-child(5),
+.page-status table.status-table td:nth-child(5){ width: 140px; }
+
+.page-status table.status-table th:nth-child(6),
+.page-status table.status-table td:nth-child(6){ width: 140px; }
+
+.page-status table.status-table th:nth-child(7),
+.page-status table.status-table td:nth-child(7){ width: 120px; text-align:center; }
+
+.page-status table.status-table th:nth-child(8),
+.page-status table.status-table td:nth-child(8){ width: 150px; }
+
+/* badge status biar gak kepotong */
+.page-status .status{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 92px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}

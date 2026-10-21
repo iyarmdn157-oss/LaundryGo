@@ -1,0 +1,371 @@
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:#0f172a;
+}
+
+/* Background pattern titik */
+.auth-bg{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px 16px;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(59,130,246,.18) 1px, transparent 1px) 0 0/18px 18px,
+    linear-gradient(180deg, #f4f9ff 0%, #eef6ff 100%);
+}
+
+/* Card utama */
+.auth-card{
+  width:min(980px, 100%);
+  display:grid;
+  grid-template-columns: 1fr 420px;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow: 0 24px 70px rgba(15,23,42,.12);
+  border:1px solid rgba(2,6,23,.06);
+}
+
+/* LEFT */
+.auth-left{ padding:34px; }
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+/* hilangkan kotak/background di logo */
+.brand-logo{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* kalau masih ada radius dari box */
+.brand-logo{
+  border-radius: 0 !important;
+}
+
+/* pastikan gambar logo rapi */
+.brand-logo img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+  background: transparent;
+}
+
+.brand-mark{
+  display:none;
+  width:100%;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  color:#fff;
+}
+
+.brand-title{
+  font-weight:900;
+  font-size:18px;
+  line-height:1.1;
+  color:#1d5190;
+}
+.brand-title span{ color:#2563eb; }
+.brand-sub{
+  font-size:12px;
+  color:#64748b;
+  margin-top:2px;
+}
+
+.auth-title{
+  margin:6px 0 18px;
+  font-size:15px;
+  font-weight:800;
+  color:#1d5190;
+;
+}
+
+/* alert */
+.alert{
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:13px;
+  margin-bottom:14px;
+  border:1px solid transparent;
+}
+.alert-danger{
+  background: rgba(239,68,68,.10);
+  border-color: rgba(239,68,68,.20);
+  color:#b91c1c;
+}
+.alert-success{
+  background: rgba(34,197,94,.10);
+  border-color: rgba(34,197,94,.20);
+  color:#15803d;
+}
+
+.field{ margin-bottom:14px; }
+.field label{
+  display:block;
+  font-size:12px;
+  color:#334155;
+  font-weight:800;
+  margin-bottom:6px;
+}
+.field input{
+  width:100%;
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid rgba(36, 85, 200, 0.14);
+  outline:none;
+  font-size:14px;
+  background:#fff;
+}
+.field input:focus{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+
+/* password toggle */
+.password-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid rgba(15,23,42,.14);
+  border-radius:12px;
+  padding:0 10px;
+}
+.password-box input{
+  border:none !important;
+  box-shadow:none !important;
+  padding:12px 0;
+}
+.password-box:focus-within{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+.toggle{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:16px;
+  opacity:.8;
+}
+.toggle:hover{ opacity:1; }
+
+.btn-auth{
+  width:100%;
+  margin-top:6px;
+  padding:12px 14px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:900;
+  letter-spacing:.10em;
+  color:#fff;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  box-shadow: 0 16px 34px rgba(37,99,235,.20);
+}
+.btn-auth:hover{ filter: brightness(0.98); }
+
+.auth-footer{
+  margin-top:14px;
+  font-size:13px;
+  color:#64748b;
+}
+.auth-footer a{
+  color:#2563eb;
+  font-weight:900;
+  text-decoration:none;
+}
+.auth-footer a:hover{ text-decoration:underline; }
+
+/* RIGHT PANEL */
+.auth-right{
+  position:relative;
+  background: linear-gradient(135deg,
+    #2f6fed 0%,
+    #4f8cf7 45%,
+    #6aa6ff 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:26px;
+}
+
+.right-inner{
+  position: relative;
+  width:100%;
+  height:100%;
+  border-radius:20px;
+  background: rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;      /* penting biar gambar nyatu & nggak keluar frame */
+  padding:0;            /* hilangin padding biar gambar bisa pas */
+}
+
+.right-title{
+  color:#fff;
+  font-weight:900;
+  font-size:16px;
+  letter-spacing:.02em;
+  opacity:.95;
+}
+
+.illus{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 560px;
+  height: auto;
+  border-radius:16px;
+}
+
+/* bubble */
+.bubble{
+  position:absolute;
+  border-radius:999px;
+  background: rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(4px);
+}
+.b1{ width:120px; height:120px; top:18px; right:18px; }
+.b2{ width:80px; height:80px; bottom:22px; right:40px; }
+.b3{ width:56px; height:56px; bottom:90px; left:18px; }
+
+/* responsive */
+@media (max-width: 900px){
+  .auth-card{ grid-template-columns: 1fr; }
+  .auth-right{ display:none; }
+}
+/* FIX: logo + LaundryGo benar-benar di tengah */
+.brand.brand-center{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+/* bikin logo agak besar biar proporsional */
+.brand.brand-center .brand-logo{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+}
+
+/* judul brand */
+.brand.brand-center .brand-title{
+  font-size:20px;
+  font-weight:900;
+  line-height:1.1;
+}
+/* Biar register muat rapi di layar */
+.auth-left form{
+  max-width: 520px;
+}
+
+@media (min-width: 901px){
+  .auth-left{
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+/* =========================
+   REGISTER: clean, modern, non-panel
+   ========================= */
+
+.page-register .auth-bg{
+  padding: 36px 16px;
+}
+
+/* Card register jadi 1 kolom dan lebih "real app" */
+.page-register .auth-card{
+  grid-template-columns: 1fr;
+  width: min(560px, 100%);
+  border-radius: 18px;
+  box-shadow: 0 28px 80px rgba(15,23,42,.10);
+}
+
+/* Panel kanan hilang */
+.page-register .auth-right{
+  display:none !important;
+}
+
+/* Isi card */
+.page-register .auth-left{
+  padding: 34px 34px 28px;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Brand & judul lebih rapih */
+.page-register .brand.brand-center{
+  margin-bottom: 10px;
+}
+
+.page-register .auth-title{
+  text-align:center;
+  margin: 8px 0 6px;
+  font-size: 14px;
+  color:#475569;
+  font-weight:700;
+}
+
+/* Bikin ada garis tipis pemisah sebelum form */
+.page-register form{
+  margin-top: 16px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(15,23,42,.08);
+}
+
+/* Input lebih "premium" */
+.page-register .field input,
+.page-register .password-box{
+  border-color: rgba(37,99,235,.18);
+  background: rgba(255,255,255,.95);
+}
+
+/* hover/focus lebih halus */
+.page-register .field input:focus{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+}
+
+/* tombol lebih tegas */
+.page-register .btn-auth{
+  margin-top: 10px;
+  border-radius: 14px;
+}
+
+/* footer center */
+.page-register .auth-footer{
+  text-align:center;
+}
+
+/* supaya nggak terasa sempit di HP */
+@media (max-width: 520px){
+  .page-register .auth-left{
+    padding: 26px 18px 22px;
+  }
+
+}
+.page-register .sub-register{
+  text-align:center;
+  margin: 0 0 6px;
+  font-size: 12px;
+  color:#94a3b8;
+}

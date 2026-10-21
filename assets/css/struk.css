@@ -1,0 +1,289 @@
+/* =========================
+   STRUK - SELARAS DENGAN dashboard.css
+   ========================= */
+
+.struk-wrap{
+  min-height: 100vh;
+  padding: 28px 16px 46px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* card utama */
+.struk-card{
+  width: min(720px, 100%);
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(2,6,23,.08);
+  border-radius: 18px;
+  box-shadow: 0 18px 55px rgba(15,23,42,.08);
+  overflow: hidden;
+}
+
+/* header */
+.struk-head{
+  padding: 18px 18px 14px;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(96,165,250,.35), transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(37,99,235,.18), transparent 55%),
+    linear-gradient(135deg, rgba(37,99,235,.10), rgba(255,255,255,0));
+  border-bottom: 1px solid rgba(2,6,23,.06);
+}
+
+/* brand center */
+.brand{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+/* ✅ logo TANPA KOTAK */
+.brand-logo{
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  display: block;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.brand-text{ display:flex; flex-direction:column; gap:2px; }
+
+.brand-name{
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -.02em;
+}
+.brand-sub{
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* meta transaksi */
+.struk-meta{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.meta-item{
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(2,6,23,.06);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+.meta-label{
+  display: block;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 800;
+}
+.meta-value{
+  display: block;
+  margin-top: 3px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+/* divider */
+.divider{
+  height: 1px;
+  background: rgba(2,6,23,.08);
+  margin: 0;
+}
+.divider.mini{
+  margin: 12px 0;
+  opacity: .8;
+}
+
+/* grid info */
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px 18px;
+}
+
+.info-box{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(2,6,23,.06);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 12px 40px rgba(15,23,42,.05);
+}
+
+.box-title{
+  font-size: 13px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* rows */
+.row{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(2,6,23,.12);
+}
+.row:last-child{ border-bottom: none; padding-bottom: 0; }
+
+.k{
+  color: #64748b;
+  font-weight: 800;
+  font-size: 13px;
+}
+.v{
+  color: #0f172a;
+  font-weight: 900;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* payment box */
+.pay-box{
+  margin: 0 18px 18px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(2,6,23,.06);
+  background: rgba(37,99,235,.05);
+}
+
+.pay-box .row{
+  border-bottom: none;
+  padding: 6px 0;
+}
+
+.row.total{
+  padding-top: 10px;
+}
+.row.total .k{
+  color: #0f172a;
+  font-weight: 900;
+}
+.row.total .v{
+  font-size: 20px;
+  color: #2563eb;
+  font-weight: 900;
+}
+
+/* badge status */
+.status-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.status-badge::before{
+  content:"";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* warna badge selaras */
+.status-badge.selesai{ color:#15803d; background:rgba(34,197,94,.12); border-color:rgba(34,197,94,.22); }
+.status-badge.dicuci{ color:#0f766e; background:rgba(20,184,166,.12); border-color:rgba(20,184,166,.22); }
+.status-badge.disetrika{ color:#7c3aed; background:rgba(124,58,237,.12); border-color:rgba(124,58,237,.22); }
+.status-badge.diantar{ color:#0369a1; background:rgba(14,165,233,.12); border-color:rgba(14,165,233,.22); }
+.status-badge.proses{ color:#1d4ed8; background:rgba(59,130,246,.12); border-color:rgba(59,130,246,.22); }
+.status-badge.batal{ color:#b91c1c; background:rgba(239,68,68,.12); border-color:rgba(239,68,68,.22); }
+
+/* actions */
+.struk-actions{
+  padding: 0 18px 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.struk-actions .btn-primary,
+.struk-actions .btn-soft{
+  min-width: 180px;
+}
+
+/* footer */
+.struk-foot{
+  text-align: center;
+  padding: 10px 18px 18px;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* print */
+@media print{
+  body{ background:#fff !important; }
+  .struk-wrap{ padding:0; }
+  .struk-card{ box-shadow:none; border:1px solid #ddd; }
+  .struk-actions{ display:none !important; }
+}
+
+/* responsive */
+@media (max-width: 720px){
+  .struk-meta{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+  .struk-actions .btn-primary,
+  .struk-actions .btn-soft{ width:100%; }
+}
+/* ===== FIX: Struk biar lebih kecil & gak terlalu lebar ===== */
+
+/* lebar maksimal card */
+.struk-card{
+  width: min(560px, 92vw) !important;  /* sebelumnya 720px */
+}
+
+/* padding biar lebih compact */
+.struk-head{ padding: 16px 16px 12px !important; }
+.grid-2{ padding: 14px 16px !important; }
+.pay-box{ margin: 0 16px 16px !important; }
+.struk-actions{ padding: 0 16px 10px !important; }
+.struk-foot{ padding: 10px 16px 16px !important; }
+
+/* meta box lebih rapet */
+.meta-item{ padding: 9px 10px !important; }
+
+/* card isi lebih kecil */
+.info-box{ padding: 12px !important; }
+
+/* =========================================
+   FIX: Detail Layanan jangan nempel divider & pinggir
+   ========================================= */
+
+/* divider kasih jarak yang jelas */
+.divider{
+  margin: 16px 0 !important;
+}
+
+/* bikin Detail Layanan terasa seperti card (inset) */
+.detail-box{
+  margin: 14px 0 !important;     /* jarak dari divider atas & bawah */
+  padding: 16px 18px !important; /* jarak isi ke pinggir card */
+  border-radius: 16px !important;
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(2,6,23,.08) !important;
+  box-shadow: 0 12px 32px rgba(15,23,42,.06) !important;
+}
+
+/* biar garis putus2 dalamnya gak mentok kiri kanan */
+.detail-box .row{
+  padding: 10px 0 !important;
+}
